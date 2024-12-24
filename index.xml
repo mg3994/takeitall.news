@@ -2416,8 +2416,11 @@ aside .categories-list .label {
 
       document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
        if (e.key === &quot;Escape&quot;) {
+        if (searchInput) {
+          searchInput.value = &quot;&quot;;
+        }
          searchContainer.classList.remove(&quot;active&quot;);
-         searchInput.value = &quot;&quot;;
+        
       }
       });
 
