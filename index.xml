@@ -1,37 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection'
-  expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml'
-  xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data'
-  xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
-    <meta charset='UTF-8' />
-    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-    <b:if
-      cond='data:blog.pageType in {&quot;index&quot;} and data:blog.pageName == &quot;&quot; and data:blog.homepageUrl != data:blog.url'>
-      <title>All Posts - <data:blog.title />
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.pageName == &quot;&quot; and data:blog.homepageUrl != data:blog.url'>
+      <title>All Posts - <data:blog.title/>
       </title>
     </b:if>
     <b:if cond='data:blog.homepageUrl == data:blog.url'>
       <title>
-        <data:blog.pageTitle />
+        <data:blog.pageTitle/>
       </title>
-      <b:else />
+      <b:else/>
       <b:if cond='data:blog.pageType in {&quot;item&quot;,&quot;static_page&quot;}'>
         <title>
-          <data:blog.pageName /> - <data:blog.title />
+          <data:blog.pageName/> - <data:blog.title/>
         </title>
-        <b:else />
+        <b:else/>
         <b:if cond='data:view.isLabelSearch'>
-          <title>Posts Tagged: <data:blog.searchLabel /> - <data:blog.title />
+          <title>Posts Tagged: <data:blog.searchLabel/> - <data:blog.title/>
           </title>
-          <b:else />
+          <b:else/>
           <b:if cond='data:view.isSearch'>
-            <title>Search Results for: <data:blog.searchQuery /> - <data:blog.title />
+            <title>Search Results for: <data:blog.searchQuery/> - <data:blog.title/>
             </title>
-            <b:else />
+            <b:else/>
             <b:if cond='data:blog.pageType in {&quot;error_page&quot;}'>
-              <title>Page Not Found - <data:blog.title />
+              <title>Page Not Found - <data:blog.title/>
               </title>
             </b:if>
           </b:if>
@@ -1100,39 +1096,35 @@ aside .categories-list .label {
       }
 
     </script>
-    <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
-      type='text/javascript' />
+    <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' type='text/javascript'/>
   </head>
   <body>
-    <b:class cond='data:view.isSingleItem' name='single-item' />
-    <b:section id='main' />
+    <b:class cond='data:view.isSingleItem' name='single-item'/>
+    <b:section id='main'/>
     <div class='container' style='position: fixed; left: 0; right: 0; top: 90px; z-index: 800'>
-      <div id='google_translate_element' />
+      <div id='google_translate_element'/>
     </div>
     <div class='mobile-menu-items'>
       <div class='close-icon'>
         <svg height='30' viewBox='0 0 30 30' width='30' xmlns='http://www.w3.org/2000/svg'>
-          <line stroke='#000' stroke-width='4' x1='5' x2='25' y1='5' y2='25' />
-          <line stroke='#000' stroke-width='4' x1='25' x2='5' y1='5' y2='25' />
+          <line stroke='#000' stroke-width='4' x1='5' x2='25' y1='5' y2='25'/>
+          <line stroke='#000' stroke-width='4' x1='25' x2='5' y1='5' y2='25'/>
         </svg>
 
       </div>
-      <a href='#about'>About Us</a>
-      <a href='#services'>Services</a>
-      <a href='#blog'>Blog</a>
-      <a href='#contact'>Contact Us</a>
-      <a class='btn' href='#'>Learn</a>
+      <a expr:href='data:blog.url == data:blog.homepageUrl ? "#about" : data:blog.homepageUrl + "#about"'>About Us</a>
+      <a expr:href='data:blog.url == data:blog.homepageUrl ? "#services" : data:blog.homepageUrl + "#services"'>Services</a>
+      <a expr:href='data:blog.url == data:blog.homepageUrl ? "#blog" : data:blog.homepageUrl + "#blog"'>Blog</a>
+      <a expr:href='data:blog.url == data:blog.homepageUrl ? "#contact" : data:blog.homepageUrl + "#contact"'>Contact Us</a>
+      <a class='btn' expr:href='data:blog.url == data:blog.homepageUrl ? "#" : data:blog.homepageUrl + "#"'>Learn</a>
     </div>
     <div class='search-container'>
       <form action='/search' method='GET'>
         <div class='search-input-container'>
-          <input name='q' placeholder='Search this website...' type='search' />
+          <input name='q' placeholder='Search this website...' type='search'/>
           <div class='icon'>
-            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5'
-              viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z'
-                stroke-linecap='round' stroke-linejoin='round' />
+            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+              <path d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' stroke-linecap='round' stroke-linejoin='round'/>
             </svg>
           </div>
         </div>
@@ -1145,60 +1137,46 @@ aside .categories-list .label {
           <a class='notranslate' expr:href='data:blog.homepageUrl'>
             <svg height='50' viewBox='0 0 200 200' width='50' xmlns='http://www.w3.org/2000/svg'>
               <!-- Outer Circle with Arrows (symbolizing wholeness and convergence) -->
-              <circle cx='100' cy='100' fill='none' r='90' stroke='#2980b9' stroke-width='6' />
+              <circle cx='100' cy='100' fill='none' r='90' stroke='#2980b9' stroke-width='6'/>
 
               <!-- Left Hand -->
-              <path
-                d='M45,130 C35,115 35,95 45,80 C50,70 60,65 70,70 C80,75 85,90 85,105 C85,115 75,120 70,115 C60,110 50,105 45,110 Z'
-                fill='#F39C12' />
+              <path d='M45,130 C35,115 35,95 45,80 C50,70 60,65 70,70 C80,75 85,90 85,105 C85,115 75,120 70,115 C60,110 50,105 45,110 Z' fill='#F39C12'/>
 
               <!-- Right Hand -->
-              <path
-                d='M155,130 C165,115 165,95 155,80 C150,70 140,65 130,70 C120,75 115,90 115,105 C115,115 125,120 130,115 C140,110 150,105 155,110 Z'
-                fill='#F39C12' />
+              <path d='M155,130 C165,115 165,95 155,80 C150,70 140,65 130,70 C120,75 115,90 115,105 C115,115 125,120 130,115 C140,110 150,105 155,110 Z' fill='#F39C12'/>
 
               <!-- Arrows in the Circle (Pointing Inward) -->
-              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100'
-                y1='60' y2='20' />
-              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100'
-                y1='60' y2='20' />
-              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100'
-                y1='140' y2='180' />
-              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100'
-                y1='140' y2='180' />
+              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100' y1='60' y2='20'/>
+              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100' y1='60' y2='20'/>
+              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100' y1='140' y2='180'/>
+              <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100' y1='140' y2='180'/>
             </svg>
           </a>
         </div>
         <div class='menu-items'>
-          <a href='#about'>About Us</a>
-          <a href='#services'>Services</a>
-          <a href='#blog'>Blog</a>
-          <a href='#contact'>Contact Us</a>
-          <a class='btn' href='#'>Learn</a>
+          <a expr:href='data:blog.url == data:blog.homepageUrl ? "#about" : data:blog.homepageUrl + "#about"'>About Us</a>
+          <a expr:href='data:blog.url == data:blog.homepageUrl ? "#services" : data:blog.homepageUrl + "#services"'>Services</a>
+          <a expr:href='data:blog.url == data:blog.homepageUrl ? "#blog" : data:blog.homepageUrl + "#blog"'>Blog</a>
+          <a expr:href='data:blog.url == data:blog.homepageUrl ? "#contact" : data:blog.homepageUrl + "#contact"'>Contact Us</a>
+          <a class='btn' expr:href='data:blog.url == data:blog.homepageUrl ? "#" : data:blog.homepageUrl + "#"'>Learn</a>
           <div class='search-icon'>
-            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5'
-              viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z'
-                stroke-linecap='round' stroke-linejoin='round' />
+            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+              <path d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' stroke-linecap='round' stroke-linejoin='round'/>
             </svg>
           </div>
         </div>
         <div class='mobile-icons-container'>
           <div class='menu-icon'>
             <svg height='20' viewBox='0 0 30 20' width='30' xmlns='http://www.w3.org/2000/svg'>
-              <rect fill='#000' height='4' width='30' />
-              <rect fill='#000' height='4' width='30' y='7' />
-              <rect fill='#000' height='4' width='30' y='14' />
+              <rect fill='#000' height='4' width='30'/>
+              <rect fill='#000' height='4' width='30' y='7'/>
+              <rect fill='#000' height='4' width='30' y='14'/>
             </svg>
 
           </div>
           <div class='search-icon'>
-            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5'
-              viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z'
-                stroke-linecap='round' stroke-linejoin='round' />
+            <svg class='size-6' fill='none' stroke='currentColor' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+              <path d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z' stroke-linecap='round' stroke-linejoin='round'/>
             </svg>
           </div>
         </div>
@@ -1216,14 +1194,13 @@ aside .categories-list .label {
             </p>
             <div class='buttons'>
               <a class='btn' href='#'>Learn More</a>
-              <a class='btn outlined' href='#'>Contact Us</a>
+              <a class='btn outlined' href='#contact'>Contact Us</a>
             </div>
           </div>
           <div class='right'>
-            <img alt=''
-              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggpy8Livium-5MkYeTpFA6HdtwmXDGmZ-ugHtdEhsl6J0du_tTNy02ESnSyltRc4eGQ4oTUkwWokrcRI23J179wOzbt8ecnCxa9lzag4gXBbFeZ-FYjqRLfPBlIGvpwQpdF6RwUObEzTwBUCe9Wy_iKVdO9RQ2nQS6WFoQcGTLLOvVPZB1BhcVrnS329hs/s16000/hero-image.png' />
+            <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggpy8Livium-5MkYeTpFA6HdtwmXDGmZ-ugHtdEhsl6J0du_tTNy02ESnSyltRc4eGQ4oTUkwWokrcRI23J179wOzbt8ecnCxa9lzag4gXBbFeZ-FYjqRLfPBlIGvpwQpdF6RwUObEzTwBUCe9Wy_iKVdO9RQ2nQS6WFoQcGTLLOvVPZB1BhcVrnS329hs/s16000/hero-image.png'/>
           </div>
-          <div class='bg-color' />
+          <div class='bg-color'/>
         </header>
       </div>
       <!-- End of hero section -->
@@ -1235,11 +1212,10 @@ aside .categories-list .label {
 
             <svg height='50' viewBox='0 0 140 60' width='200' xmlns='http://www.w3.org/2000/svg'>
               <!-- Background or Color Block -->
-              <rect fill='white' height='50' width='200' x='0' y='0' />
+              <rect fill='white' height='50' width='200' x='0' y='0'/>
 
               <!-- Text: Antinna -->
-              <text fill='#4CAF50' font-family='Arial, sans-serif' font-size='30' font-weight='bold'
-                x='10' y='35'>
+              <text fill='#4CAF50' font-family='Arial, sans-serif' font-size='30' font-weight='bold' x='10' y='35'>
                 Antinna
               </text>
 
@@ -1261,9 +1237,9 @@ aside .categories-list .label {
             <div class='features-container'>
               <div class='feature'>
                 <div class='icon'>
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50" />
-                    <path d="M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="#FFFFFF" />
+                  <svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'>
+                    <circle cx='12' cy='12' fill='#4CAF50' r='12'/>
+                    <path d='M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z' fill='#FFFFFF'/>
                   </svg>
                 </div>
                 <h3>Simplified Development</h3>
@@ -1274,9 +1250,9 @@ aside .categories-list .label {
               </div>
               <div class='feature'>
                 <div class='icon'>
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50" />
-                    <path d="M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="#FFFFFF" />
+                  <svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'>
+                    <circle cx='12' cy='12' fill='#4CAF50' r='12'/>
+                    <path d='M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z' fill='#FFFFFF'/>
                   </svg>
                 </div>
                 <h3>Beautiful UI</h3>
@@ -1289,8 +1265,7 @@ aside .categories-list .label {
             <a class='btn outlined' href='#'>Learn More</a>
           </div>
           <div class='right'>
-            <img alt=''
-              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi27HFoavUoFhoFZMsREKppoCSfRHj5gpoBVj8erpYP3Igay_Rl2tsDXMHpLrO35Hcemo_7ZrkiP-2R8wfKRwmzbnIgBj6J1qID1Y0FjDoJGyBJLzVlkGay25X1POb_yyOtjB4CjdwJdEbkiM6TG7bysorT7j43m3Ckfc9QGkur9LPOyQPDQLqF26Xm2cjh/w640-h640/image1.png' />
+            <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi27HFoavUoFhoFZMsREKppoCSfRHj5gpoBVj8erpYP3Igay_Rl2tsDXMHpLrO35Hcemo_7ZrkiP-2R8wfKRwmzbnIgBj6J1qID1Y0FjDoJGyBJLzVlkGay25X1POb_yyOtjB4CjdwJdEbkiM6TG7bysorT7j43m3Ckfc9QGkur9LPOyQPDQLqF26Xm2cjh/w640-h640/image1.png'/>
           </div>
         </div>
       </section>
@@ -1306,8 +1281,7 @@ aside .categories-list .label {
           </div>
           <div class='services-container'>
             <div class='service'>
-              <img alt=''
-                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIXuH1YyKNlXFjTicNP2kCau3tyQntKIhcoTnsE_tgGkmBhg8VW1fcmkRY4G5ltoqcD-727-R2_SGhb0GTr_ZnFs2eP_WQuwTLCMusTyoqEEl-3MacfQwawSxnECYs8vyFzzT3FQA23wyXu8Tgkk4NMzl0Bs08BtuXXpEqXJKmSKiuPHBqFYZ6vzojsGy8/w640-h640/service1.png' />
+              <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIXuH1YyKNlXFjTicNP2kCau3tyQntKIhcoTnsE_tgGkmBhg8VW1fcmkRY4G5ltoqcD-727-R2_SGhb0GTr_ZnFs2eP_WQuwTLCMusTyoqEEl-3MacfQwawSxnECYs8vyFzzT3FQA23wyXu8Tgkk4NMzl0Bs08BtuXXpEqXJKmSKiuPHBqFYZ6vzojsGy8/w640-h640/service1.png'/>
               <div class='content'>
                 <h3>Mobile App Development</h3>
                 <p>
@@ -1318,8 +1292,7 @@ aside .categories-list .label {
               </div>
             </div>
             <div class='service'>
-              <img alt=''
-                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUmiwWmCRATCOcUoiSEB8Z2l2RnFrrOFesxgs0gEytKVihY_aZRp9JEViVD_HY-_70D-uAHbhqwGjqdaoHs8MpxV8V80nTDUlHrod94-nJ4RyfdYRRm5xuYhSlGTnKdNm2GeczRI6az2uNhkdXz2_Y96Mf_MN8zyBm151x79ToOM5mk9ZiHqrYTRspB20n/w640-h640/service2.png' />
+              <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUmiwWmCRATCOcUoiSEB8Z2l2RnFrrOFesxgs0gEytKVihY_aZRp9JEViVD_HY-_70D-uAHbhqwGjqdaoHs8MpxV8V80nTDUlHrod94-nJ4RyfdYRRm5xuYhSlGTnKdNm2GeczRI6az2uNhkdXz2_Y96Mf_MN8zyBm151x79ToOM5mk9ZiHqrYTRspB20n/w640-h640/service2.png'/>
               <div class='content'>
                 <h3>UI/UX Design Services</h3>
                 <p>
@@ -1329,8 +1302,7 @@ aside .categories-list .label {
               </div>
             </div>
             <div class='service'>
-              <img alt=''
-                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgueDNilEiTp5gC6GOcm-8ESTNwDTPk7Nts0IcWvOwI_8rh8_iaQeWesi9fN4us0XCJuufs_-66O3y0PISn3nI77WVgLYYRjQH4WUljtSFVSA64Y94qcMyRKcNfwWJwTXfwu8eBiaRsdTv3NSfF5nxpXLlnnFcFarqCH35azd2QK2C67aKxCPugNgnbsHLU/w640-h640/service3.png' />
+              <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgueDNilEiTp5gC6GOcm-8ESTNwDTPk7Nts0IcWvOwI_8rh8_iaQeWesi9fN4us0XCJuufs_-66O3y0PISn3nI77WVgLYYRjQH4WUljtSFVSA64Y94qcMyRKcNfwWJwTXfwu8eBiaRsdTv3NSfF5nxpXLlnnFcFarqCH35azd2QK2C67aKxCPugNgnbsHLU/w640-h640/service3.png'/>
               <div class='content'>
                 <h3>App Quality Assurance</h3>
                 <p>
@@ -1346,8 +1318,7 @@ aside .categories-list .label {
       <section id='why'>
         <div class='container'>
           <div class='left'>
-            <img alt=''
-              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixpXwquZbLRXkz1YEKk5Cne6WqyBq7PHToernzpYYZbfGiPBa7SpOG3cWvlYhin6IMl0K5GEBv8Oo0AZwkmwqmqOLAhhgGdD_oKDHoYe-W9QWy9kbb6cOxPsD6twm339oM7xfu475jsWs1-aIV1_THY59oWfwYjc-VMTmgON24Sq8CPiOjIkWU_XvCTl3F/s16000/image2.png' />
+            <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQ4L5TptX1KJWyBrd1h2HKUCA5EUB2dS973vTXVBKQxJdzJzjS8zxqVpPFIiRbuL8ZNJC_qFQZKNQegwl62fuodbuYzLRSTIikGR8f4HOJEJj7nfjEK8Is3zjLWQq1SYqFBUqoCrXwtEKdBoK6fgSnVYC_9pYsEhR7tLbq7OJYQK-YwF2bo7QS1wKxYi9l/s16000/image2.png'/>
           </div>
           <div class='right'>
             <h2>Why Choose Our Company for Mobile App Development</h2>
@@ -1359,9 +1330,9 @@ aside .categories-list .label {
             <div class='features-container'>
               <div class='feature'>
                 <div class='icon'>
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50" />
-                    <path d="M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="#FFFFFF" />
+                  <svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'>
+                    <circle cx='12' cy='12' fill='#4CAF50' r='12'/>
+                    <path d='M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z' fill='#FFFFFF'/>
                   </svg>
                 </div>
                 <h3>Expertise</h3>
@@ -1372,9 +1343,9 @@ aside .categories-list .label {
               </div>
               <div class='feature'>
                 <div class='icon'>
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50" />
-                    <path d="M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="#FFFFFF" />
+                  <svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'>
+                    <circle cx='12' cy='12' fill='#4CAF50' r='12'/>
+                    <path d='M9.5 16.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z' fill='#FFFFFF'/>
                   </svg>
                 </div>
                 <h3>Customization</h3>
@@ -1384,7 +1355,7 @@ aside .categories-list .label {
                 </p>
               </div>
             </div>
-            <a class='btn outlined' href='#'>Contact Us</a>
+            <a class='btn outlined' href='#contact'>Contact Us</a>
           </div>
         </div>
       </section>
@@ -1395,17 +1366,15 @@ aside .categories-list .label {
             <h2>Our Latest Articles</h2>
             <p>Discover the Latest Insights, Trends, and Updates from Our Team</p>
           </div>
-          <div class='services-container' />
-          <a class='btn outlined'
-            expr:href='data:blog.homepageUrl + &quot;search?max-results=15&quot;'>View All Posts</a>
+          <div class='services-container'/>
+          <a class='btn outlined' expr:href='data:blog.homepageUrl + &quot;search?max-results=15&quot;'>View All Posts</a>
         </section>
       </div>
       <!-- End of Blog section -->
       <section id='contact'>
         <div class='container'>
           <b:section id='contact-form-container'>
-            <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm'
-              version='1'>
+            <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' version='1'>
               <b:includable id='main'>
                 <div class='heading-container'>
                   <h2>Still have questions?</h2>
@@ -1413,22 +1382,14 @@ aside .categories-list .label {
                 </div>
                 <form name='contact-form'>
                   <div class='group'>
-                    <input expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;'
-                      name='name' placeholder='Full Name' size='30' type='text' value='' />
-                    <input expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;'
-                      name='email' placeholder='Email' size='30' type='text' value='' />
+                    <input expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' placeholder='Full Name' size='30' type='text' value=''/>
+                    <input expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' placeholder='Email' size='30' type='text' value=''/>
                   </div>
-                  <textarea cols='25'
-                    expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;'
-                    name='email-message' placeholder='Your Message' rows='5' />
-                  <input class='contact-form-button contact-form-button-submit'
-                    expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;'
-                    type='button' value='Send Message' />
+                  <textarea cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' placeholder='Your Message' rows='5'/>
+                  <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' type='button' value='Send Message'/>
                   <div style='text-align: left;'>
-                    <p expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'
-                      style='font-size: 14px; color: red; display: flex; align-items: center; gap: 16px; border: none; background: transparent; box-shadow: unset;' />
-                    <p expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'
-                      style='font-size: 14px; color: green; display: flex; align-items: center; gap: 16px; border: none; background: transparent; box-shadow: unset;' />
+                    <p expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;' style='font-size: 14px; color: red; display: flex; align-items: center; gap: 16px; border: none; background: transparent; box-shadow: unset;'/>
+                    <p expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;' style='font-size: 14px; color: green; display: flex; align-items: center; gap: 16px; border: none; background: transparent; box-shadow: unset;'/>
                   </div>
                 </form>
               </b:includable>
@@ -1442,8 +1403,7 @@ aside .categories-list .label {
       <div class='post-container'>
         <div class='container not-found'>
           <div class='left'>
-            <img alt=''
-              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJQYM2t9Vib9_8YCFv67WwPVR03dsifYF4g4-xLRyQJzXdbE_Y1omejJExArdfbJQSiejRXybyRGYZ0590-jY_73jBNAxJWJAerpZTdxHsrH_WyNpwcRqrMU-q4cRToEVW4eHYx6j4J1MlOuFrUwbytva02UGpvhOpN1DiRJVqmluexUKpnhvzvTAF8elc/w532-h640/404.webp' />
+            <img alt='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOJWwAbuH-wwrUasPGuLCgVb0D_sdv2SGmgLPoK5lzUN03cjQ6E-S7c1MqOlGehcPMRaIHgOUR_6-s2Xl24ol57bY8lgqpM-QeVwoRVpYHCElrNSxfVN45VSJSLh-WUPEf1naTpq1HBy5rfk6lpHOtk5g2b_uXfSSHZd8-W1JOmEwzzjozDP9RbCMjqHXp/s16000/404.gif'/>
           </div>
           <div class='right'>
             <h1 class='text-404'>404</h1>
@@ -1478,7 +1438,7 @@ aside .categories-list .label {
                   <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                   <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-                  <b:widget-setting name='reactionsLabel' />
+                  <b:widget-setting name='reactionsLabel'/>
                   <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
                   <b:widget-setting name='style.layout'>1x1</b:widget-setting>
                   <b:widget-setting name='showLabels'>true</b:widget-setting>
@@ -1494,19 +1454,17 @@ aside .categories-list .label {
                   <b:if cond='!data:mobile'>
                     <!-- posts -->
                     <div class='blog-posts hfeed'>
-                      <b:include data='top' name='status-message' />
+                      <b:include data='top' name='status-message'/>
                       <div class='post-container'>
                         <div class='blog-list'>
                           <div class='cards-container'>
                             <b:loop values='data:posts' var='post'>
-                              <b:include data='post' name='post' />
-                              <b:include
-                                cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'
-                                data='post' name='comment_picker' />
+                              <b:include data='post' name='post'/>
+                              <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
                               <!-- Ad -->
                               <b:if cond='data:post.includeAd'>
                                 <div class='inline-ad'>
-                                  <data:adCode />
+                                  <data:adCode/>
                                 </div>
                               </b:if>
                             </b:loop>
@@ -1517,106 +1475,88 @@ aside .categories-list .label {
                     <!-- navigation -->
                     <b:if cond='data:view.isMultipleItems'>
                       <b:if cond='data:olderPageUrl'>
-                        <a class='btn outlined' expr:href='data:olderPageUrl'
-                          style='margin-top: 32px;'>Load More Posts...</a>
+                        <a class='btn outlined' expr:href='data:olderPageUrl' style='margin-top: 32px;'>Load More Posts...</a>
                       </b:if>
                     </b:if>
-                    <b:else />
-                    <b:include name='mobile-main' />
+                    <b:else/>
+                    <b:include name='mobile-main'/>
                   </b:if>
                 </b:includable>
-                <b:includable id='backlinkDeleteIcon' var='backlink' />
-                <b:includable id='backlinks' var='post' />
+                <b:includable id='backlinkDeleteIcon' var='backlink'/>
+                <b:includable id='backlinks' var='post'/>
                 <b:includable id='comment-form' var='post'>
                   <div class='comment-form'>
-                    <a name='comment-form' />
+                    <a name='comment-form'/>
                     <b:if cond='data:mobile'>
                       <h4 id='comment-post-message'>
-                        <a
-                          expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;'
-                          href='javascript:void(0)'>
-                          <data:postCommentMsg />
+                        <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'>
+                          <data:postCommentMsg/>
                         </a>
                       </h4>
                       <p>
-                        <data:blogCommentMessage />
+                        <data:blogCommentMessage/>
                       </p>
-                      <data:blogTeamBlogMessage />
-                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src' />
-                      <iframe allowtransparency='true'
-                        class='blogger-iframe-colorize blogger-comment-from-post'
-                        expr:height='data:cmtIframeInitialHeight' frameborder='0'
-                        id='comment-editor' name='comment-editor' src='' style='display: none'
-                        width='100%' />
-                      <b:else />
+                      <data:blogTeamBlogMessage/>
+                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+                      <b:else/>
                       <h4 id='comment-post-message'>
-                        <data:postCommentMsg />
+                        <data:postCommentMsg/>
                       </h4>
                       <p>
-                        <data:blogCommentMessage />
+                        <data:blogCommentMessage/>
                       </p>
-                      <data:blogTeamBlogMessage />
-                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src' />
-                      <iframe allowtransparency='true'
-                        class='blogger-iframe-colorize blogger-comment-from-post'
-                        expr:height='data:cmtIframeInitialHeight' frameborder='0'
-                        id='comment-editor' name='comment-editor' src='' width='100%' />
+                      <data:blogTeamBlogMessage/>
+                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
                     </b:if>
-                    <data:post.cmtfpIframe />
-                    <script type='text/javascript'> BLOG_CMT_createIframe(&#39; <data:post.appRpcRelayPath />
-                      &#39;); </script>
+                    <data:post.cmtfpIframe/>
+                    <script type='text/javascript'> BLOG_CMT_createIframe(&#39; <data:post.appRpcRelayPath/> &#39;); </script>
                   </div>
                 </b:includable>
                 <b:includable id='commentDeleteIcon' var='comment'>
                   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
                     <b:if cond='data:showCmtPopup'>
                       <div class='goog-toggle-button'>
-                        <div class='goog-inline-block comment-action-icon' />
+                        <div class='goog-inline-block comment-action-icon'/>
                       </div>
-                      <b:else />
-                      <a class='comment-delete' expr:href='data:comment.deleteUrl'
-                        expr:title='data:top.deleteCommentMsg'>
-                        <img src='https://resources.blogblog.com/img/icon_delete13.gif' />
+                      <b:else/>
+                      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+                        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
                       </a>
                     </b:if>
                   </span>
                 </b:includable>
                 <b:includable id='comment_count_picker' var='post'>
-                  <a class='comment-link' expr:href='data:post.addCommentUrl'
-                    expr:onclick='data:post.addCommentOnclick'>
-                    <data:post.commentLabelFull />: </a>
+                  <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                    <data:post.commentLabelFull/>: </a>
                 </b:includable>
                 <b:includable id='comment_picker' var='post'>
                   <b:if cond='data:post.showThreadedComments'>
-                    <b:include data='post' name='threaded_comments' />
-                    <b:else />
-                    <b:include data='post' name='comments' />
+                    <b:include data='post' name='threaded_comments'/>
+                    <b:else/>
+                    <b:include data='post' name='comments'/>
                   </b:if>
                 </b:includable>
                 <b:includable id='comments' var='post'>
                   <div class='comments' id='comments'>
-                    <a name='comments' />
+                    <a name='comments'/>
                     <b:if cond='data:post.allowComments'>
                       <h4>
-                        <data:post.commentLabelFull />: </h4>
+                        <data:post.commentLabelFull/>: </h4>
                       <b:if cond='data:post.commentPagingRequired'>
                         <span class='paging-control-container'>
                           <b:if cond='data:post.hasOlderLinks'>
-                            <a expr:class='data:post.oldLinkClass'
-                              expr:href='data:post.oldestLinkUrl'>
-                              <data:post.oldestLinkText />
-                            </a> &#160; <a
-                              expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-                              <data:post.olderLinkText />
+                            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+                              <data:post.oldestLinkText/>
+                            </a> &#160; <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+                              <data:post.olderLinkText/>
                             </a> &#160; </b:if>
-                          <data:post.commentRangeText />
-                          <b:if cond='data:post.hasNewerLinks'> &#160; <a
-                              expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
-                              <data:post.newerLinkText />
-                            </a> &#160; <a
-                              expr:class='data:post.newLinkClass'
-                              expr:href='data:post.newestLinkUrl'>
-                              <data:post.newestLinkText />
+                          <data:post.commentRangeText/>
+                          <b:if cond='data:post.hasNewerLinks'> &#160; <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+                              <data:post.newerLinkText/>
+                            </a> &#160; <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+                              <data:post.newestLinkText/>
                             </a>
                           </b:if>
                         </span>
@@ -1624,43 +1564,40 @@ aside .categories-list .label {
                       <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
                         <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
                           <b:loop values='data:post.comments' var='comment'>
-                            <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass'
-                              expr:id='data:comment.anchorName'>
+                            <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
                               <b:if cond='data:comment.favicon'>
-                                <img expr:src='data:comment.favicon' height='16px'
-                                  style='margin-bottom:-2px;' width='16px' />
+                                <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
                               </b:if>
-                              <a expr:name='data:comment.anchorName' />
+                              <a expr:name='data:comment.anchorName'/>
                               <b:if cond='data:blog.enabledCommentProfileImages'>
-                                <data:comment.authorAvatarImage />
+                                <data:comment.authorAvatarImage/>
                               </b:if>
                               <b:if cond='data:comment.authorUrl'>
                                 <a expr:href='data:comment.authorUrl' rel='nofollow'>
-                                  <data:comment.author />
+                                  <data:comment.author/>
                                 </a>
-                                <b:else />
-                                <data:comment.author />
+                                <b:else/>
+                                <data:comment.author/>
                               </b:if>
-                              <data:commentPostedByMsg />
+                              <data:commentPostedByMsg/>
                             </dt>
-                            <dd class='comment-body'
-                              expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
+                            <dd class='comment-body' expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
                               <b:if cond='data:comment.isDeleted'>
                                 <span class='deleted-comment'>
-                                  <data:comment.body />
+                                  <data:comment.body/>
                                 </span>
-                                <b:else />
+                                <b:else/>
                                 <p>
-                                  <data:comment.body />
+                                  <data:comment.body/>
                                 </p>
                               </b:if>
                             </dd>
                             <dd class='comment-footer'>
                               <span class='comment-timestamp'>
                                 <a expr:href='data:comment.url' title='comment permalink'>
-                                  <data:comment.timestamp />
+                                  <data:comment.timestamp/>
                                 </a>
-                                <b:include data='comment' name='commentDeleteIcon' />
+                                <b:include data='comment' name='commentDeleteIcon'/>
                               </span>
                             </dd>
                           </b:loop>
@@ -1669,41 +1606,36 @@ aside .categories-list .label {
                       <b:if cond='data:post.commentPagingRequired'>
                         <span class='paging-control-container'>
                           <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
-                            <data:post.oldestLinkText />
+                            <data:post.oldestLinkText/>
                           </a>
-                          <a
-                            expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-                            <data:post.olderLinkText />
-                          </a> &#160; <data:post.commentRangeText />
-                          &#160; <a expr:class='data:post.newLinkClass'
-                            expr:href='data:post.newerLinkUrl'>
-                            <data:post.newerLinkText />
+                          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+                            <data:post.olderLinkText/>
+                          </a> &#160; <data:post.commentRangeText/>
+                          &#160; <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+                            <data:post.newerLinkText/>
                           </a>
-                          <a
-                            expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
-                            <data:post.newestLinkText />
+                          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+                            <data:post.newestLinkText/>
                           </a>
                         </span>
                       </b:if>
                       <p class='comment-footer'>
                         <b:if cond='data:post.embedCommentForm'>
                           <b:if cond='data:post.allowNewComments'>
-                            <b:include data='post' name='comment-form' />
-                            <b:else />
-                            <data:post.noNewCommentsText />
+                            <b:include data='post' name='comment-form'/>
+                            <b:else/>
+                            <data:post.noNewCommentsText/>
                           </b:if>
-                          <b:elseif cond='data:post.allowComments' />
-                          <a expr:href='data:post.addCommentUrl'
-                            expr:onclick='data:post.addCommentOnclick'>
-                            <data:postCommentMsg />
+                          <b:elseif cond='data:post.allowComments'/>
+                          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                            <data:postCommentMsg/>
                           </a>
                         </b:if>
                       </p>
                     </b:if>
                     <b:if cond='data:showCmtPopup'>
                       <div id='comment-popup'>
-                        <iframe allowtransparency='true' frameborder='0' id='comment-actions'
-                          name='comment-actions' scrolling='no' />
+                        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'/>
                       </div>
                     </b:if>
                   </div>
@@ -1713,27 +1645,25 @@ aside .categories-list .label {
                     <!-- Blog feed links -->
                     <b:if cond='data:feedLinks'>
                       <div class='blog-feeds'>
-                        <b:include data='feedLinks' name='feedLinksBody' />
+                        <b:include data='feedLinks' name='feedLinksBody'/>
                       </div>
                     </b:if>
-                    <b:else />
+                    <b:else/>
                     <!--Post
                     feed links -->
                     <div class='post-feeds'>
                       <b:loop values='data:posts' var='post'>
-                        <b:include cond='data:post.allowComments and data:post.feedLinks'
-                          data='post.feedLinks' name='feedLinksBody' />
+                        <b:include cond='data:post.allowComments and data:post.feedLinks' data='post.feedLinks' name='feedLinksBody'/>
                       </b:loop>
                     </div>
                   </b:if>
                 </b:includable>
                 <b:includable id='feedLinksBody' var='links'>
                   <div class='feed-links'>
-                    <data:feedLinksMsg />
+                    <data:feedLinksMsg/>
                     <b:loop values='data:links' var='f'>
-                      <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType'
-                        target='_blank'>
-                        <data:f.name /> ( <data:f.feedType />) </a>
+                      <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>
+                        <data:f.name/> ( <data:f.feedType/>) </a>
                     </b:loop>
                   </div>
                 </b:includable>
@@ -1746,36 +1676,34 @@ aside .categories-list .label {
                     <b:if cond='data:post.dateHeader'>
                       <div class='date-header'>
                         <span>
-                          <data:post.dateHeader />
+                          <data:post.dateHeader/>
                         </span>
                       </div>
                     </b:if>
                     <div class='mobile-post-outer'>
                       <a expr:href='data:post.url'>
                         <h3 class='mobile-index-title entry-title' itemprop='name'>
-                          <data:post.title />
+                          <data:post.title/>
                         </h3>
                         <div class='mobile-index-arrow'>&amp;rsaquo;</div>
                         <div class='mobile-index-contents'>
                           <b:if cond='data:post.thumbnailUrl'>
                             <div class='mobile-index-thumbnail'>
                               <div class='Image'>
-                                <img expr:src='data:post.thumbnailUrl' />
+                                <img expr:src='data:post.thumbnailUrl'/>
                               </div>
                             </div>
                           </b:if>
                           <div class='post-body'>
                             <b:if cond='data:post.snippet'>
-                              <data:post.snippet />
+                              <data:post.snippet/>
                             </b:if>
                           </div>
                         </div>
-                        <div style='clear: both;' />
+                        <div style='clear: both;'/>
                       </a>
                       <div class='mobile-index-comment'>
-                        <b:include
-                          cond='data:blog.pageType != &quot;static_page&quot;                          and data:post.allowComments                          and data:post.numComments != 0'
-                          data='post' name='comment_count_picker' />
+                        <b:include cond='data:blog.pageType != &quot;static_page&quot;                          and data:post.allowComments                          and data:post.numComments != 0' data='post' name='comment_count_picker'/>
                       </div>
                     </div>
                   </div>
@@ -1783,89 +1711,83 @@ aside .categories-list .label {
                 <b:includable id='mobile-main' var='top'>
                   <!-- posts -->
                   <div class='blog-posts hfeed'>
-                    <b:include data='top' name='status-message' />
+                    <b:include data='top' name='status-message'/>
                     <b:if cond='data:blog.pageType == &quot;index&quot;'>
                       <b:loop values='data:posts' var='post'>
-                        <b:include data='post' name='mobile-index-post' />
+                        <b:include data='post' name='mobile-index-post'/>
                       </b:loop>
-                      <b:else />
+                      <b:else/>
                       <b:loop values='data:posts' var='post'>
-                        <b:include data='post' name='mobile-post' />
+                        <b:include data='post' name='mobile-post'/>
                       </b:loop>
                     </b:if>
                   </div>
-                  <b:include name='mobile-nextprev' />
+                  <b:include name='mobile-nextprev'/>
                 </b:includable>
                 <b:includable id='mobile-nextprev'>
                   <div class='blog-pager' id='blog-pager'>
                     <b:if cond='data:newerPageUrl'>
                       <div class='mobile-link-button' id='blog-pager-newer-link'>
-                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl'
-                          expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;'
-                          expr:title='data:newerPageTitle'>&amp;lsaquo;</a>
+                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>&amp;lsaquo;</a>
                       </div>
                     </b:if>
                     <b:if cond='data:olderPageUrl'>
                       <div class='mobile-link-button' id='blog-pager-older-link'>
-                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl'
-                          expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;'
-                          expr:title='data:olderPageTitle'>&amp;rsaquo;</a>
+                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>&amp;rsaquo;</a>
                       </div>
                     </b:if>
                     <div class='mobile-link-button' id='blog-pager-home-link'>
                       <a class='home-link' expr:href='data:blog.homepageUrl'>
-                        <data:homeMsg />
+                        <data:homeMsg/>
                       </a>
                     </div>
                     <div class='mobile-desktop-link'>
                       <a class='home-link' expr:href='data:desktopLinkUrl'>
-                        <data:desktopLinkMsg />
+                        <data:desktopLinkMsg/>
                       </a>
                     </div>
                   </div>
-                  <div class='clear' />
+                  <div class='clear'/>
                 </b:includable>
                 <b:includable id='mobile-post' var='post'>
                   <div class='date-outer'>
                     <b:if cond='data:post.dateHeader'>
                       <h2 class='date-header'>
                         <span>
-                          <data:post.dateHeader />
+                          <data:post.dateHeader/>
                         </span>
                       </h2>
                     </b:if>
                     <div class='date-posts'>
                       <div class='post-outer'>
-                        <div class='post hentry uncustomized-post-template' itemscope='itemscope'
-                          itemtype='http://schema.org/BlogPosting'>
+                        <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
                           <b:if cond='data:post.thumbnailUrl'>
-                            <meta expr:content='data:post.thumbnailUrl' itemprop='image_url' />
+                            <meta expr:content='data:post.thumbnailUrl' itemprop='image_url'/>
                           </b:if>
-                          <meta expr:content='data:blog.blogId' itemprop='blogId' />
-                          <meta expr:content='data:post.id' itemprop='postId' />
-                          <a expr:name='data:post.id' />
+                          <meta expr:content='data:blog.blogId' itemprop='blogId'/>
+                          <meta expr:content='data:post.id' itemprop='postId'/>
+                          <a expr:name='data:post.id'/>
                           <b:if cond='data:post.title'>
                             <h3 class='post-title entry-title' itemprop='name'>
                               <b:if cond='data:post.link'>
                                 <a expr:href='data:post.link'>
-                                  <data:post.title />
+                                  <data:post.title/>
                                 </a>
-                                <b:elseif cond='data:post.url and data:blog.url != data:post.url' />
+                                <b:elseif cond='data:post.url and data:blog.url != data:post.url'/>
                                 <a expr:href='data:post.url'>
-                                  <data:post.title />
+                                  <data:post.title/>
                                 </a>
-                                <b:else />
-                                <data:post.title />
+                                <b:else/>
+                                <data:post.title/>
                               </b:if>
                             </h3>
                           </b:if>
                           <div class='post-header'>
-                            <div class='post-header-line-1' />
+                            <div class='post-header-line-1'/>
                           </div>
-                          <div class='post-body entry-content'
-                            expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-                            <data:post.body />
-                            <div style='clear: both;' />
+                          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+                            <data:post.body/>
+                            <div style='clear: both;'/>
                             <!-- clear for photos floats -->
                           </div>
                           <div class='post-footer'>
@@ -1873,21 +1795,18 @@ aside .categories-list .label {
                               <span class='post-author vcard'>
                                 <b:if cond='data:top.showAuthor'>
                                   <b:if cond='data:post.authorProfileUrl'>
-                                    <span class='fn' itemprop='author' itemscope='itemscope'
-                                      itemtype='http://schema.org/Person'>
-                                      <meta expr:content='data:post.authorProfileUrl' itemprop='url' />
-                                      <a expr:href='data:post.authorProfileUrl' rel='author'
-                                        title='author profile'>
+                                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                                      <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
+                                      <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
                                         <span itemprop='name'>
-                                          <data:post.author />
+                                          <data:post.author/>
                                         </span>
                                       </a>
                                     </span>
-                                    <b:else />
-                                    <span class='fn' itemprop='author' itemscope='itemscope'
-                                      itemtype='http://schema.org/Person'>
+                                    <b:else/>
+                                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
                                       <span itemprop='name'>
-                                        <data:post.author />
+                                        <data:post.author/>
                                       </span>
                                     </span>
                                   </b:if>
@@ -1895,41 +1814,33 @@ aside .categories-list .label {
                               </span>
                               <span class='post-timestamp'>
                                 <b:if cond='data:top.showTimestamp'>
-                                  <data:top.timestampLabel />
+                                  <data:top.timestampLabel/>
                                   <b:if cond='data:post.url'>
-                                    <meta expr:content='data:post.url.canonical' itemprop='url' />
-                                    <a class='timestamp-link' expr:href='data:post.url'
-                                      rel='bookmark' title='permanent link'>
-                                      <abbr class='published'
-                                        expr:title='data:post.timestampISO8601'
-                                        itemprop='datePublished'>
-                                        <data:post.timestamp />
+                                    <meta expr:content='data:post.url.canonical' itemprop='url'/>
+                                    <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+                                      <abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'>
+                                        <data:post.timestamp/>
                                       </abbr>
                                     </a>
                                   </b:if>
                                 </b:if>
                               </span>
                               <span class='post-comment-link'>
-                                <b:include
-                                  cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                                  and data:post.allowComments'
-                                  data='post' name='comment_count_picker' />
+                                <b:include cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                                  and data:post.allowComments' data='post' name='comment_count_picker'/>
                               </span>
                             </div>
                             <div class='post-footer-line post-footer-line-2'>
                               <b:if cond='data:top.showMobileShare'>
-                                <div class='mobile-link-button goog-inline-block'
-                                  id='mobile-share-button'>
+                                <div class='mobile-link-button goog-inline-block' id='mobile-share-button'>
                                   <a href='javascript:void(0);'>
-                                    <data:shareMsg />
+                                    <data:shareMsg/>
                                   </a>
                                 </div>
                               </b:if>
                             </div>
                           </div>
                         </div>
-                        <b:include
-                          cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'
-                          data='post' name='comment_picker' />
+                        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
                       </div>
                     </div>
                   </div>
@@ -1938,34 +1849,30 @@ aside .categories-list .label {
                   <div class='blog-pager' id='blog-pager'>
                     <b:if cond='data:newerPageUrl'>
                       <span id='blog-pager-newer-link'>
-                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl'
-                          expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;'
-                          expr:title='data:newerPageTitle'>
-                          <data:newerPageTitle />
+                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
+                          <data:newerPageTitle/>
                         </a>
                       </span>
                     </b:if>
                     <b:if cond='data:olderPageUrl'>
                       <span id='blog-pager-older-link'>
-                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl'
-                          expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;'
-                          expr:title='data:olderPageTitle'>
-                          <data:olderPageTitle />
+                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
+                          <data:olderPageTitle/>
                         </a>
                       </span>
                     </b:if>
                     <a class='home-link' expr:href='data:blog.homepageUrl'>
-                      <data:homeMsg />
+                      <data:homeMsg/>
                     </a>
                     <b:if cond='data:mobileLinkUrl'>
                       <div class='blog-mobile-link'>
                         <a expr:href='data:mobileLinkUrl'>
-                          <data:mobileLinkMsg />
+                          <data:mobileLinkMsg/>
                         </a>
                       </div>
                     </b:if>
                   </div>
-                  <div class='clear' />
+                  <div class='clear'/>
                 </b:includable>
                 <b:includable id='post' var='post'>
                   <b:if cond='data:view.isSingleItem'>
@@ -1974,66 +1881,65 @@ aside .categories-list .label {
                         <b:if cond='data:post.labels'>
                           <b:loop values='data:post.labels' var='label'>
                             <a expr:href='data:label.url'>
-                              <data:label.name />
+                              <data:label.name/>
                             </a>
                           </b:loop>
-                          <b:else />
+                          <b:else/>
                       Uncategorized </b:if>
                       </span> &gt; <strong>
-                        <data:post.title />
+                        <data:post.title/>
                       </strong>
                     </div>
                     <h1 class='post-heading'>
-                      <data:post.title />
+                      <data:post.title/>
                     </h1>
                     <div class='post-meta'>
                       <div class='date'> Posted by <strong>
-                          <data:post.author />
+                          <data:post.author/>
                         </strong> on <strong>
-                          <data:post.timestamp />
+                          <data:post.timestamp/>
                         </strong>
                       </div>
                       <div class='labels'>
                         <b:loop values='data:post.labels' var='label'>
                           <a class='label' expr:href='data:label.url'>
-                            <data:label.name />
+                            <data:label.name/>
                           </a>
                         </b:loop>
                       </div>
                     </div>
                     <div class='post-body'>
-                      <data:post.body />
+                      <data:post.body/>
                     </div>
                     <div class='blog-list'>
                       <h2>Recent Posts</h2>
-                      <div class='cards-container recent-posts-container' />
+                      <div class='cards-container recent-posts-container'/>
                     </div>
                   </b:if>
                   <b:if cond='data:view.isMultipleItems'>
                     <div class='card'>
                       <a expr:href='data:post.url'>
                         <b:if cond='data:post.firstImageUrl'>
-                          <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' />
-                          <b:else />
-                          <img expr:alt='data:post.title'
-                            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX5fJEVBv14YTiDOZQ9AcgBY-FDLbiUNt0ypx2SjJELeHMRZ1EMXbu69YjNGiHY4IZcgdyX43vlRq-uzbfy3oDFUnXu0LUan_LvQVBKYB2LZk0o-jwW7wUlc1KEYdkmKvGM-BqU4E6Mr7EXKrLmnm3Ux8Z9WupJkcpjalNseP4_FQo7oM9sztHQQ-M4rkl/s16000/thumbnail-placeholder.jpg' />
+                          <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
+                          <b:else/>
+                          <img expr:alt='data:post.title' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qj4GtXna090Q1-R8hIY69tpMdc9QWewEODYQCS2FV57askuUaOD87O4Qn2gY4FcgVY8C8e-ickla16fvzGPR9Na2tkejnBbn_xh9pCKmO9ZWd_y_g1fjbS2uJEoFUvx5cT1Pt6F29l0IUzDVHHksyxkGOimBRaxsWpn_6wlXGzPavsCpGAC7KPqIKn1E/s16000/thumbnail-placeholder.png'/>
                         </b:if>
                       </a>
                       <div class='blog-list-content'>
                         <a expr:href='data:post.url'>
                           <h3>
-                            <data:post.title />
+                            <data:post.title/>
                           </h3>
                         </a>
                         <div class='labels'>
                           <b:loop values='data:post.labels' var='label'>
                             <a class='label' expr:href='data:label.url'>
-                              <data:label.name />
+                              <data:label.name/>
                             </a>
                           </b:loop>
                         </div>
                         <p>
-                          <b:eval expr='data:post.snippet' />
+                          <b:eval expr='data:post.snippet'/>
                         </p>
                       </div>
                     </div>
@@ -2043,57 +1949,44 @@ aside .categories-list .label {
                   <b:if cond='data:post.editUrl'>
                     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
                       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-                        <img alt='' class='icon-action' height='18'
-                          src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18' />
+                        <img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
                       </a>
                     </span>
                   </b:if>
                 </b:includable>
                 <b:includable id='shareButtons' var='post'>
                   <b:if cond='data:top.showEmailButton'>
-                    <a class='goog-inline-block share-button sb-email'
-                      expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;'
-                      expr:title='data:top.emailThisMsg' target='_blank'>
+                    <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
                       <span class='share-button-link-text'>
-                        <data:top.emailThisMsg />
+                        <data:top.emailThisMsg/>
                       </span>
                     </a>
                   </b:if>
                   <b:if cond='data:top.showBlogThisButton'>
-                    <a class='goog-inline-block share-button sb-blog'
-                      expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;'
-                      expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;'
-                      expr:title='data:top.blogThisMsg' target='_blank'>
+                    <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
                       <span class='share-button-link-text'>
-                        <data:top.blogThisMsg />
+                        <data:top.blogThisMsg/>
                       </span>
                     </a>
                   </b:if>
                   <b:if cond='data:top.showTwitterButton'>
-                    <a class='goog-inline-block share-button sb-twitter'
-                      expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;'
-                      expr:title='data:top.shareToTwitterMsg' target='_blank'>
+                    <a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
                       <span class='share-button-link-text'>
-                        <data:top.shareToTwitterMsg />
+                        <data:top.shareToTwitterMsg/>
                       </span>
                     </a>
                   </b:if>
                   <b:if cond='data:top.showFacebookButton'>
-                    <a class='goog-inline-block share-button sb-facebook'
-                      expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;'
-                      expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;'
-                      expr:title='data:top.shareToFacebookMsg' target='_blank'>
+                    <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
                       <span class='share-button-link-text'>
-                        <data:top.shareToFacebookMsg />
+                        <data:top.shareToFacebookMsg/>
                       </span>
                     </a>
                   </b:if>
                   <b:if cond='data:top.showPinterestButton'>
-                    <a class='goog-inline-block share-button sb-pinterest'
-                      expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;'
-                      expr:title='data:top.shareToPinterestMsg' target='_blank'>
+                    <a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'>
                       <span class='share-button-link-text'>
-                        <data:top.shareToPinterestMsg />
+                        <data:top.shareToPinterestMsg/>
                       </span>
                     </a>
                   </b:if>
@@ -2102,53 +1995,45 @@ aside .categories-list .label {
                   <b:if cond='data:navMessage'>
                     <div class='status-msg-wrap'>
                       <div class='status-msg-body'>
-                        <data:navMessage />
+                        <data:navMessage/>
                       </div>
                       <div class='status-msg-border'>
                         <div class='status-msg-bg'>
                           <div class='status-msg-hidden'>
-                            <data:navMessage />
+                            <data:navMessage/>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div style='clear: both;' />
+                    <div style='clear: both;'/>
                   </b:if>
                 </b:includable>
                 <b:includable id='threaded-comment-form' var='post'>
                   <div class='comment-form'>
-                    <a name='comment-form' />
+                    <a name='comment-form'/>
                     <b:if cond='data:mobile'>
                       <p>
-                        <data:blogCommentMessage />
+                        <data:blogCommentMessage/>
                       </p>
-                      <data:blogTeamBlogMessage />
-                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src' />
-                      <iframe allowtransparency='true'
-                        class='blogger-iframe-colorize blogger-comment-from-post'
-                        expr:height='data:cmtIframeInitialHeight' frameborder='0'
-                        id='comment-editor' name='comment-editor' src='' style='display: none'
-                        width='100%' />
-                      <b:else />
+                      <data:blogTeamBlogMessage/>
+                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+                      <b:else/>
                       <p>
-                        <data:blogCommentMessage />
+                        <data:blogCommentMessage/>
                       </p>
-                      <data:blogTeamBlogMessage />
-                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src' />
-                      <iframe allowtransparency='true'
-                        class='blogger-iframe-colorize blogger-comment-from-post'
-                        expr:height='data:cmtIframeInitialHeight' frameborder='0'
-                        id='comment-editor' name='comment-editor' src='' width='100%' />
+                      <data:blogTeamBlogMessage/>
+                      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
                     </b:if>
-                    <data:post.cmtfpIframe />
-                    <script type='text/javascript'> BLOG_CMT_createIframe(&#39; <data:post.appRpcRelayPath />
-                      &#39;); </script>
+                    <data:post.cmtfpIframe/>
+                    <script type='text/javascript'> BLOG_CMT_createIframe(&#39; <data:post.appRpcRelayPath/> &#39;); </script>
                   </div>
                 </b:includable>
                 <b:includable id='threaded_comment_js' var='post'>
-                  <script async='async' expr:src='data:post.commentSrc' type='text/javascript' />
-                  <script type='text/javascript'> (function() { var items = <data:post.commentJso />;
-                    var msgs = <data:post.commentMsgs />; var config = <data:post.commentConfig />;
+                  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+                  <script type='text/javascript'> (function() { var items = <data:post.commentJso/>;
+                    var msgs = <data:post.commentMsgs/>; var config = <data:post.commentConfig/>;
                     // <![CDATA[
       var cursor = null;
       if (items && items.length > 0) {
@@ -2328,31 +2213,29 @@ aside .categories-list .label {
                 </b:includable>
                 <b:includable id='threaded_comments' var='post'>
                   <div class='comments' id='comments'>
-                    <a name='comments' />
+                    <a name='comments'/>
                     <h4>
-                      <data:post.commentLabelFull />: </h4>
+                      <data:post.commentLabelFull/>: </h4>
                     <div class='comments-content'>
-                      <b:include cond='data:post.embedCommentForm' data='post'
-                        name='threaded_comment_js' />
+                      <b:include cond='data:post.embedCommentForm' data='post' name='threaded_comment_js'/>
                       <div id='comment-holder'>
-                        <data:post.commentHtml />
+                        <data:post.commentHtml/>
                       </div>
                     </div>
                     <p class='comment-footer'>
                       <b:if cond='data:post.allowNewComments'>
-                        <b:include data='post' name='threaded-comment-form' />
-                        <b:else />
-                        <data:post.noNewCommentsText />
+                        <b:include data='post' name='threaded-comment-form'/>
+                        <b:else/>
+                        <data:post.noNewCommentsText/>
                       </b:if>
                     </p>
                     <b:if cond='data:showCmtPopup'>
                       <div id='comment-popup'>
-                        <iframe allowtransparency='true' frameborder='0' id='comment-actions'
-                          name='comment-actions' scrolling='no' />
+                        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'/>
                       </div>
                     </b:if>
                     <div id='backlinks-container'>
-                      <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;' />
+                      <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'/>
                     </div>
                   </div>
                 </b:includable>
@@ -2361,8 +2244,7 @@ aside .categories-list .label {
           </div>
           <aside>
             <b:section id='popular-posts-container'>
-              <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'
-                version='1'>
+              <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='1'>
                 <b:widget-settings>
                   <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
                   <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -2377,20 +2259,17 @@ aside .categories-list .label {
                         <div class='card'>
                           <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
                             <a expr:href='data:post.href' target='_blank'>
-                              <b:with
-                                value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 60, &quot;1:1&quot;)                                  : data:post.thumbnail'
-                                var='image'>
-                                <img alt='' border='0' expr:src='data:image' />
+                              <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 60, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                                <img alt='' border='0' expr:src='data:image'/>
                               </b:with>
                             </a>
-                            <b:else />
+                            <b:else/>
                             <a expr:href='data:post.href' target='_blank'>
-                              <img
-                                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX5fJEVBv14YTiDOZQ9AcgBY-FDLbiUNt0ypx2SjJELeHMRZ1EMXbu69YjNGiHY4IZcgdyX43vlRq-uzbfy3oDFUnXu0LUan_LvQVBKYB2LZk0o-jwW7wUlc1KEYdkmKvGM-BqU4E6Mr7EXKrLmnm3Ux8Z9WupJkcpjalNseP4_FQo7oM9sztHQQ-M4rkl/s16000/thumbnail-placeholder.jpg' />
+                              <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qj4GtXna090Q1-R8hIY69tpMdc9QWewEODYQCS2FV57askuUaOD87O4Qn2gY4FcgVY8C8e-ickla16fvzGPR9Na2tkejnBbn_xh9pCKmO9ZWd_y_g1fjbS2uJEoFUvx5cT1Pt6F29l0IUzDVHHksyxkGOimBRaxsWpn_6wlXGzPavsCpGAC7KPqIKn1E/s16000/thumbnail-placeholder.png'/>
                             </a>
                           </b:if>
                           <a expr:href='data:post.href' target='_blank'>
-                            <data:post.title />
+                            <data:post.title/>
                           </a>
                         </div>
                       </b:loop>
@@ -2401,14 +2280,14 @@ aside .categories-list .label {
             </b:section>
             <div class='widget recent-comments'>
               <h3>Recent Comments</h3>
-              <div class='widget-content' />
+              <div class='widget-content'/>
             </div>
             <b:section id='labels-container'>
               <b:widget id='Label1' locked='false' title='Labels' type='Label' version='1'>
                 <b:widget-settings>
                   <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
                   <b:widget-setting name='display'>LIST</b:widget-setting>
-                  <b:widget-setting name='selectedLabelsList' />
+                  <b:widget-setting name='selectedLabelsList'/>
                   <b:widget-setting name='showType'>ALL</b:widget-setting>
                   <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
                 </b:widget-settings>
@@ -2418,8 +2297,8 @@ aside .categories-list .label {
                     <div class='widget-content'>
                       <b:loop values='data:labels' var='label'>
                         <a class='label' expr:href='data:label.url'>
-                          <data:label.name />
-                          <span style='margin-left: 4px;'>( <data:label.count />) </span>
+                          <data:label.name/>
+                          <span style='margin-left: 4px;'>( <data:label.count/>) </span>
                         </a>
                       </b:loop>
                     </div>
@@ -2441,27 +2320,19 @@ aside .categories-list .label {
             <a class='logo' href='#'>
               <svg height='50' viewBox='0 0 200 200' width='50' xmlns='http://www.w3.org/2000/svg'>
                 <!-- Outer Circle with Arrows (symbolizing wholeness and convergence) -->
-                <circle cx='100' cy='100' fill='none' r='90' stroke='#2980b9' stroke-width='6' />
+                <circle cx='100' cy='100' fill='none' r='90' stroke='#2980b9' stroke-width='6'/>
 
                 <!-- Left Hand -->
-                <path
-                  d='M45,130 C35,115 35,95 45,80 C50,70 60,65 70,70 C80,75 85,90 85,105 C85,115 75,120 70,115 C60,110 50,105 45,110 Z'
-                  fill='#F39C12' />
+                <path d='M45,130 C35,115 35,95 45,80 C50,70 60,65 70,70 C80,75 85,90 85,105 C85,115 75,120 70,115 C60,110 50,105 45,110 Z' fill='#F39C12'/>
 
                 <!-- Right Hand -->
-                <path
-                  d='M155,130 C165,115 165,95 155,80 C150,70 140,65 130,70 C120,75 115,90 115,105 C115,115 125,120 130,115 C140,110 150,105 155,110 Z'
-                  fill='#F39C12' />
+                <path d='M155,130 C165,115 165,95 155,80 C150,70 140,65 130,70 C120,75 115,90 115,105 C115,115 125,120 130,115 C140,110 150,105 155,110 Z' fill='#F39C12'/>
 
                 <!-- Arrows in the Circle (Pointing Inward) -->
-                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100'
-                  y1='60' y2='20' />
-                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100'
-                  y1='60' y2='20' />
-                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100'
-                  y1='140' y2='180' />
-                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100'
-                  y1='140' y2='180' />
+                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100' y1='60' y2='20'/>
+                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100' y1='60' y2='20'/>
+                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='35' x2='100' y1='140' y2='180'/>
+                <line stroke='#2980b9' stroke-linecap='round' stroke-width='6' x1='165' x2='100' y1='140' y2='180'/>
               </svg>
             </a>
             <p>Creating innovative solutions for a connected world.</p>
@@ -2471,9 +2342,7 @@ aside .categories-list .label {
             <div class='social'>
               <a href='#'>
                 <!-- facebook -->
-                <svg height='40px' id='Layer_1' version='1.1' viewBox='0 0 291.319 291.319'
-                  width='40px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'
-                  xmlns:xlink='http://www.w3.org/1999/xlink'>
+                <svg height='40px' id='Layer_1' version='1.1' viewBox='0 0 291.319 291.319' width='40px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
 <g>
 	<path d='M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659   S0,226.109,0,145.66C0,65.219,65.21,0,145.659,0z' style='fill:#3B5998;'/>
 	<path d='M163.394,100.277h18.772v-27.73h-22.067v0.1c-26.738,0.947-32.218,15.977-32.701,31.763h-0.055   v13.847h-18.207v27.156h18.207v72.793h27.439v-72.793h22.477l4.342-27.156h-26.81v-8.366   C154.791,104.556,158.341,100.277,163.394,100.277z' style='fill:#FFFFFF;'/>
@@ -2483,9 +2352,7 @@ aside .categories-list .label {
               </a>
               <a href='#'>
                 <!-- instagram -->
-                <svg fill='#D62976' height='40px' id='Layer_1' version='1.1'
-                  viewBox='0 0 169.063 169.063' width='40px' xml:space='preserve'
-                  xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                <svg fill='#D62976' height='40px' id='Layer_1' version='1.1' viewBox='0 0 169.063 169.063' width='40px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
 <g>
 	<path d='M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752   c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407   c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752   c17.455,0,31.656,14.201,31.656,31.655V122.407z'/>
 	<path d='M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561   C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561   c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z'/>
@@ -2495,11 +2362,8 @@ aside .categories-list .label {
               </a>
               <a href='#'>
                 <!-- Github -->
-                <svg height='40' viewBox='0 0 97.707 97.707' width='40'
-                  xmlns='http://www.w3.org/2000/svg'>
-                  <path clip-rule='evenodd'
-                    d='M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z'
-                    fill='#FFFFFF' fill-rule='evenodd' />
+                <svg height='40' viewBox='0 0 97.707 97.707' width='40' xmlns='http://www.w3.org/2000/svg'>
+                  <path clip-rule='evenodd' d='M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z' fill='#FFFFFF' fill-rule='evenodd'/>
                 </svg>
 
 
@@ -2542,57 +2406,57 @@ aside .categories-list .label {
       // Search icon
 
       searchIcons.forEach((searchIcon) =&gt; {
-      searchIcon.addEventListener(&quot;click&quot;, () =&gt; {
-      searchContainer.classList.add(&quot;active&quot;);
-      searchInput.focus();
-      });
+       searchIcon.addEventListener(&quot;click&quot;, () =&gt; {
+        searchContainer.classList.add(&quot;active&quot;);
+         if (searchInput) {
+          searchInput.focus();
+         }
+       });
       });
 
       document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
-      if (e.key === &quot;Escape&quot;) {
-      searchContainer.classList.remove(&quot;active&quot;);
-      searchInput.value = &quot;&quot;;
+       if (e.key === &quot;Escape&quot;) {
+         searchContainer.classList.remove(&quot;active&quot;);
+         searchInput.value = &quot;&quot;;
       }
       });
 
       document.addEventListener(&quot;click&quot;, (e) =&gt; {
-      if (
-      e.target.closest(&quot;.search-input-container&quot;) ||
-      e.target.closest(&quot;.search-icon&quot;)
-      )
-      return;
+      if (e.target.closest(&quot;.search-input-container&quot;) || e.target.closest(&quot;.search-icon&quot;))
+       return;
 
       searchContainer.classList.remove(&quot;active&quot;);
+      if (searchInput) {
       searchInput.value = &quot;&quot;;
+
+      }
       });
 
 
     </script>
     <b:if cond='data:view.isHomepage'>
-      <script> const populateLatestPosts = (data) =&gt; { console.log(&quot;Data: &quot;, data);
-        const posts = data.feed.entry; const postsContainer = document.querySelector(&quot;#blog
-        .services-container&quot;); posts.forEach(post =&gt; { const title = post.title.$t; const
-        link = post.link.find(l =&gt; l.rel === &#39;alternate&#39;).href; const summary =
+      <script> const populateLatestPosts = (data) =&gt; {
+        const posts = data.feed.entry; const postsContainer = document.querySelector(&quot;#blog .services-container&quot;);
+        posts.forEach(post =&gt; { const title = post.title.$t; 
+        const link = post.link.find(l =&gt; l.rel === &#39;alternate&#39;).href; const summary =
         post.summary.$t ? post.summary.$t : &#39;&#39;; const labels = post.category ?
         post.category.map(cat =&gt; cat.term): []; const thumbnail = post.media$thumbnail ?
         post.media$thumbnail.url.replace(&#39;s72&#39;, &#39;s300&#39;) :
-        &#39;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX5fJEVBv14YTiDOZQ9AcgBY-FDLbiUNt0ypx2SjJELeHMRZ1EMXbu69YjNGiHY4IZcgdyX43vlRq-uzbfy3oDFUnXu0LUan_LvQVBKYB2LZk0o-jwW7wUlc1KEYdkmKvGM-BqU4E6Mr7EXKrLmnm3Ux8Z9WupJkcpjalNseP4_FQo7oM9sztHQQ-M4rkl/s16000/thumbnail-placeholder.jpg&#39;;
+        &#39;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qj4GtXna090Q1-R8hIY69tpMdc9QWewEODYQCS2FV57askuUaOD87O4Qn2gY4FcgVY8C8e-ickla16fvzGPR9Na2tkejnBbn_xh9pCKmO9ZWd_y_g1fjbS2uJEoFUvx5cT1Pt6F29l0IUzDVHHksyxkGOimBRaxsWpn_6wlXGzPavsCpGAC7KPqIKn1E/s16000/thumbnail-placeholder.png&#39;;
         const postHTML = ` <div class='service'>
           <a href='${link}'>
-            <img alt='${title}' src='${thumbnail}' />
+            <img alt='${title}' src='${thumbnail}'/>
           </a>
           <div class='content'>
             <a href='${link}'>
               <h3>${title}</h3>
             </a>
-            <div class='labels'> ${labels.map(label =&gt; ` <a class='label'
-                href='/search/label/${label}'>${label}</a>`).join(&#39; &#39;)} </div>
+            <div class='labels'> ${labels.map(label =&gt; ` <a class='label' href='/search/label/${label}'>${label}</a>`).join(&#39; &#39;)} </div>
             <p class='snippet'>${summary}</p>
           </div>
         </div> `;
         postsContainer.innerHTML += postHTML; }); } </script>
-      <script
-        src='/feeds/posts/summary?alt=json-in-script&amp;max-results=3&amp;callback=populateLatestPosts' />
+      <script src='/feeds/posts/summary?alt=json-in-script&amp;max-results=3&amp;callback=populateLatestPosts'/>
     </b:if>
     <b:if cond='data:view.isSingleItem'>
       <script> const populateRecentPosts = (data) =&gt; { const recentPostsContainer =
@@ -2602,36 +2466,41 @@ aside .categories-list .label {
         &#39;&#39;; const labels = post.category ? post.category.map(cat =&gt; cat.term): []; const
         thumbnail = post.media$thumbnail ? post.media$thumbnail.url.replace(&#39;s72&#39;,
         &#39;s300&#39;) :
-        &#39;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX5fJEVBv14YTiDOZQ9AcgBY-FDLbiUNt0ypx2SjJELeHMRZ1EMXbu69YjNGiHY4IZcgdyX43vlRq-uzbfy3oDFUnXu0LUan_LvQVBKYB2LZk0o-jwW7wUlc1KEYdkmKvGM-BqU4E6Mr7EXKrLmnm3Ux8Z9WupJkcpjalNseP4_FQo7oM9sztHQQ-M4rkl/s16000/thumbnail-placeholder.jpg&#39;;
+        &#39;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qj4GtXna090Q1-R8hIY69tpMdc9QWewEODYQCS2FV57askuUaOD87O4Qn2gY4FcgVY8C8e-ickla16fvzGPR9Na2tkejnBbn_xh9pCKmO9ZWd_y_g1fjbS2uJEoFUvx5cT1Pt6F29l0IUzDVHHksyxkGOimBRaxsWpn_6wlXGzPavsCpGAC7KPqIKn1E/s16000/thumbnail-placeholder.png&#39;;
         const postHTML = ` <div class='card'>
           <a href='${link}'>
-            <img alt='${title}' src='${thumbnail}' />
+            <img alt='${title}' src='${thumbnail}'/>
           </a>
           <div class='content'>
             <a href='${link}'>
               <h3>${title}</h3>
             </a>
-            <div class='labels'> ${labels.map(label =&gt; ` <a class='label'
-                href='/search/label/${label}'>${label}</a>`).join(&#39; &#39;)} </div>
+            <div class='labels'> ${labels.map(label =&gt; ` <a class='label' href='/search/label/${label}'>${label}</a>`).join(&#39; &#39;)} </div>
             <p class='snippet'>${summary}</p>
           </div>
         </div> `;
         recentPostsContainer.innerHTML += postHTML; }); } </script>
-      <script
-        src='/feeds/posts/summary?alt=json-in-script&amp;max-results=2&amp;callback=populateRecentPosts' />
+      <script src='/feeds/posts/summary?alt=json-in-script&amp;max-results=2&amp;callback=populateRecentPosts'/>
     </b:if>
     <b:if cond='not data:view.isHomepage'>
-      <script> const populateRecentComments = (data) =&gt; { const comments = data.feed.entry; const
-        container = document.querySelector(&#39;.recent-comments .widget-content&#39;);
-        comments.forEach(comment =&gt; { const author = comment.author[0].name.$t; const content =
-        comment.content.$t; const postUrl = comment.link.find(link =&gt; link.rel ===
-        &#39;alternate&#39;).href; const commentHTML = ` <div class='card'>
+      <script> const populateRecentComments = (data) =&gt; { 
+      const comments = data.feed.entry || [];
+      const  container = document.querySelector(&#39;.recent-comments .widget-content&#39;);
+      if (!container) {
+      console.warn(&#39;Container for recent comments not found.&#39;);
+      return;
+      }
+        comments.forEach(comment =&gt; { 
+        const author = comment.author &amp;&amp; comment.author[0] ? comment.author[0].name.$t : &#39;Anonymous&#39;;
+        const content = comment.content ? comment.content.$t : &#39;No content&#39;;
+        const link = comment.link ? comment.link.find(link =&gt; link.rel === &#39;alternate&#39;) : null;
+        const postUrl = link ? link.href : &#39;#&#39;;
+        const commentHTML = ` <div class='card'>
           <a href='${postUrl}'>
             <strong>${author}:</strong> &#8220;${content}&#8221; </a>
         </div> `;
         container.innerHTML += commentHTML; }); } </script>
-      <script
-        src='/feeds/comments/default?alt=json-in-script&amp;max-results=2&amp;callback=populateRecentComments' />
+      <script src='/feeds/comments/default?alt=json-in-script&amp;max-results=2&amp;callback=populateRecentComments'/>
     </b:if>
     <!--[
     Cookies Consent Notice ]-->
@@ -2639,15 +2508,14 @@ aside .categories-list .label {
     <div class='K2C k2hide' id='K2C_box'>
       <div class='K2C-Main'>
         <svg viewbox='0 0 50 50'>
-          <path
-            d='M 25 4 C 13.414063 4 4 13.414063 4 25 C 4 36.585938 13.414063 46 25 46 C 36.585938 46 46 36.585938 46 25 C 46 24.378906 45.960938 23.78125 45.910156 23.203125 C 45.878906 22.855469 45.671875 22.546875 45.359375 22.390625 C 45.042969 22.234375 44.671875 22.253906 44.375 22.441406 C 43.824219 22.792969 43.191406 23 42.5 23 C 41.015625 23 39.769531 22.082031 39.253906 20.792969 C 39.148438 20.527344 38.933594 20.320313 38.667969 20.222656 C 38.398438 20.125 38.101563 20.144531 37.847656 20.28125 C 37.003906 20.738281 36.035156 21 35 21 C 31.675781 21 29 18.324219 29 15 C 29 13.964844 29.261719 12.996094 29.71875 12.152344 C 29.855469 11.898438 29.875 11.601563 29.777344 11.332031 C 29.679688 11.066406 29.472656 10.851563 29.207031 10.746094 C 27.917969 10.230469 27 8.984375 27 7.5 C 27 6.808594 27.207031 6.175781 27.558594 5.625 C 27.746094 5.328125 27.765625 4.957031 27.609375 4.640625 C 27.453125 4.328125 27.144531 4.121094 26.796875 4.089844 C 26.21875 4.039063 25.621094 4 25 4 Z M 38 4 C 36.894531 4 36 4.894531 36 6 C 36 7.105469 36.894531 8 38 8 C 39.105469 8 40 7.105469 40 6 C 40 4.894531 39.105469 4 38 4 Z M 25 6 C 25.144531 6 25.292969 6.015625 25.4375 6.023438 C 25.285156 6.519531 25 6.953125 25 7.5 C 25 9.4375 26.136719 10.984375 27.660156 11.960938 C 27.269531 12.90625 27 13.917969 27 15 C 27 19.40625 30.59375 23 35 23 C 36.082031 23 37.09375 22.730469 38.039063 22.339844 C 39.015625 23.863281 40.5625 25 42.5 25 C 43.046875 25 43.480469 24.714844 43.980469 24.5625 C 43.984375 24.707031 44 24.855469 44 25 C 44 35.503906 35.503906 44 25 44 C 14.496094 44 6 35.503906 6 25 C 6 14.496094 14.496094 6 25 6 Z M 36.5 12 C 35.671875 12 35 12.671875 35 13.5 C 35 14.328125 35.671875 15 36.5 15 C 37.328125 15 38 14.328125 38 13.5 C 38 12.671875 37.328125 12 36.5 12 Z M 21.5 15 C 20.671875 15 20 15.671875 20 16.5 C 20 17.328125 20.671875 18 21.5 18 C 22.328125 18 23 17.328125 23 16.5 C 23 15.671875 22.328125 15 21.5 15 Z M 45 15 C 44.449219 15 44 15.449219 44 16 C 44 16.550781 44.449219 17 45 17 C 45.550781 17 46 16.550781 46 16 C 46 15.449219 45.550781 15 45 15 Z M 15 20 C 13.34375 20 12 21.34375 12 23 C 12 24.65625 13.34375 26 15 26 C 16.65625 26 18 24.65625 18 23 C 18 21.34375 16.65625 20 15 20 Z M 24.5 24 C 23.671875 24 23 24.671875 23 25.5 C 23 26.328125 23.671875 27 24.5 27 C 25.328125 27 26 26.328125 26 25.5 C 26 24.671875 25.328125 24 24.5 24 Z M 17 31 C 15.894531 31 15 31.894531 15 33 C 15 34.105469 15.894531 35 17 35 C 18.105469 35 19 34.105469 19 33 C 19 31.894531 18.105469 31 17 31 Z M 30.5 32 C 29.121094 32 28 33.121094 28 34.5 C 28 35.878906 29.121094 37 30.5 37 C 31.878906 37 33 35.878906 33 34.5 C 33 33.121094 31.878906 32 30.5 32 Z' />
+          <path d='M 25 4 C 13.414063 4 4 13.414063 4 25 C 4 36.585938 13.414063 46 25 46 C 36.585938 46 46 36.585938 46 25 C 46 24.378906 45.960938 23.78125 45.910156 23.203125 C 45.878906 22.855469 45.671875 22.546875 45.359375 22.390625 C 45.042969 22.234375 44.671875 22.253906 44.375 22.441406 C 43.824219 22.792969 43.191406 23 42.5 23 C 41.015625 23 39.769531 22.082031 39.253906 20.792969 C 39.148438 20.527344 38.933594 20.320313 38.667969 20.222656 C 38.398438 20.125 38.101563 20.144531 37.847656 20.28125 C 37.003906 20.738281 36.035156 21 35 21 C 31.675781 21 29 18.324219 29 15 C 29 13.964844 29.261719 12.996094 29.71875 12.152344 C 29.855469 11.898438 29.875 11.601563 29.777344 11.332031 C 29.679688 11.066406 29.472656 10.851563 29.207031 10.746094 C 27.917969 10.230469 27 8.984375 27 7.5 C 27 6.808594 27.207031 6.175781 27.558594 5.625 C 27.746094 5.328125 27.765625 4.957031 27.609375 4.640625 C 27.453125 4.328125 27.144531 4.121094 26.796875 4.089844 C 26.21875 4.039063 25.621094 4 25 4 Z M 38 4 C 36.894531 4 36 4.894531 36 6 C 36 7.105469 36.894531 8 38 8 C 39.105469 8 40 7.105469 40 6 C 40 4.894531 39.105469 4 38 4 Z M 25 6 C 25.144531 6 25.292969 6.015625 25.4375 6.023438 C 25.285156 6.519531 25 6.953125 25 7.5 C 25 9.4375 26.136719 10.984375 27.660156 11.960938 C 27.269531 12.90625 27 13.917969 27 15 C 27 19.40625 30.59375 23 35 23 C 36.082031 23 37.09375 22.730469 38.039063 22.339844 C 39.015625 23.863281 40.5625 25 42.5 25 C 43.046875 25 43.480469 24.714844 43.980469 24.5625 C 43.984375 24.707031 44 24.855469 44 25 C 44 35.503906 35.503906 44 25 44 C 14.496094 44 6 35.503906 6 25 C 6 14.496094 14.496094 6 25 6 Z M 36.5 12 C 35.671875 12 35 12.671875 35 13.5 C 35 14.328125 35.671875 15 36.5 15 C 37.328125 15 38 14.328125 38 13.5 C 38 12.671875 37.328125 12 36.5 12 Z M 21.5 15 C 20.671875 15 20 15.671875 20 16.5 C 20 17.328125 20.671875 18 21.5 18 C 22.328125 18 23 17.328125 23 16.5 C 23 15.671875 22.328125 15 21.5 15 Z M 45 15 C 44.449219 15 44 15.449219 44 16 C 44 16.550781 44.449219 17 45 17 C 45.550781 17 46 16.550781 46 16 C 46 15.449219 45.550781 15 45 15 Z M 15 20 C 13.34375 20 12 21.34375 12 23 C 12 24.65625 13.34375 26 15 26 C 16.65625 26 18 24.65625 18 23 C 18 21.34375 16.65625 20 15 20 Z M 24.5 24 C 23.671875 24 23 24.671875 23 25.5 C 23 26.328125 23.671875 27 24.5 27 C 25.328125 27 26 26.328125 26 25.5 C 26 24.671875 25.328125 24 24.5 24 Z M 17 31 C 15.894531 31 15 31.894531 15 33 C 15 34.105469 15.894531 35 17 35 C 18.105469 35 19 34.105469 19 33 C 19 31.894531 18.105469 31 17 31 Z M 30.5 32 C 29.121094 32 28 33.121094 28 34.5 C 28 35.878906 29.121094 37 30.5 37 C 31.878906 37 33 35.878906 33 34.5 C 33 33.121094 31.878906 32 30.5 32 Z'/>
         </svg>
         <h2>Cookies Consent</h2>
         <p>This website uses cookies to offer you a better Browsing Experience. By using our
           website, You agree to the use of Cookies</p>
       </div>
       <button class='C-button' id='Cookie_btn'>Accept Cookies!</button>
-      <a class='C-button outl' href='#'>Learn More</a>
+      <a class='C-button outl' expr:href='data:blog.homepageUrl + &quot;2024/12/privacy-policy.html&quot;' target='_blank'>Learn More</a>
     </div>
 
     <script>/*<![CDATA[*/ var K2C_box=document.querySelector("#K2C_box"),Cookie_btn=document.querySelector("#Cookie_btn"),ckErrMes="Cookie can't be set! Please unblock this site from the cookie setting of your browser.";if(null!=K2C_box){Cookie_btn.onclick=()=>{document.cookie="CookieConsentByFineshop=Accepted; max-age=2592000; path=/",document.cookie?K2C_box.classList.add("acptd"):alert(ckErrMes)};let e=document.cookie.indexOf("CookieConsentByFineshop=Accepted");-1!=e?K2C_box.classList.add("k2hide"):K2C_box.classList.remove("k2hide")} /*]]>*/</script>
